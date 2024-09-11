@@ -1,1 +1,1 @@
-Good profession
+Good professor
