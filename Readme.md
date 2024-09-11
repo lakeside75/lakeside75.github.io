@@ -1,1 +1,1 @@
-Good professor
+let go
