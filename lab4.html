@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html 
+<head></head>
+
+<title>ordering website </title>
+<style>
+body{
+background:aqua;
+color:red;
+}
+
+     
+    </style>
+</head>
+<body>
+    <script>
+        
+    
+        
+        
+        window.alert("Welcome to our BRAIN FRENCH FREID!");
+
+        
+       customerName = prompt("Please enter your name:");
+        itemRequested = prompt("What item would you like to order?");
+        numberOfItems = prompt("How many items would you like to order? (1-99)");
+
+        
+        numberOfItems = Math.min(Math.max(parseInt(numberOfItems), 1), 99);
+
+        
+         currentDate = new Date();
+        arrivalDate = new Date(currentDate);
+        arrivalDate.setDate(currentDate.getDate() + 7);
+
+        
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedArrivalDate = arrivalDate.toLocaleDateString(undefined, options);
+
+        
+        const currentHour = currentDate.getHours();
+        let greeting;
+        if (currentHour < 12) {
+            greeting = "Good Morning";
+        } else if (currentHour < 18) {
+            greeting = "Good Afternoon";
+        } else {
+            greeting = "Good Evening";
+        }
+
+       
+        document.write(`<h1>${greeting} ${customerName}, Thank you for Ordering!</h1>`);
+        document.write(`<div class="order-details">`);
+        document.write(`<p>You ordered: ${numberOfItems} ${itemRequested}(s)</p>`);
+        document.write(`<p>Expected arrival date: ${formattedArrivalDate}</p>`);
+        document.write(`</div>`);
+      
+        document.write(`<p>Enjoy your delicious meal.</p>`);
+        document.write(`<p>See you next time,Bye.</p>`);
+    </script>
+</body>
+</html>
